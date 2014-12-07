@@ -11,7 +11,7 @@
 
 (function ($) {
 
-    $.widget("jt.menu", {
+    $.widget("jt.jtmenu", {
 
         _DOM: {
             template: null
@@ -95,6 +95,9 @@
                             '</li>' +
                             '</ul>' +
                             '</nav>';
+
+
+            el.html(DOM.template);
 
 
         },

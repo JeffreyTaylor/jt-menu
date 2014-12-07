@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html style="background-color:gray;">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Menu test</title>
+
+
+    <!--jquery & jquery UI-->
+    <script type="text/javascript" src="scripts/vendor/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/jquery-ui.min.js"></script>
+
+    <!--jt-menu-->
+    <link rel="stylesheet" href="scripts/menu/menu.css" />
+    <script type="text/javascript" src="scripts/menu/jt-menu.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#menu").jtmenu();
+
+        });
+
+    </script>
+
+
 </head>
 <body>
 
+<div id="menu"></div>
 
 
 
