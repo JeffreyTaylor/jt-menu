@@ -17,7 +17,13 @@
 
         $(document).ready(function () {
 
-            $("#menu").jtmenu();
+            $("#menu").jtmenu({
+                links: [
+                    {title: "work", href: '/'},
+                    {title: "info", href: '/'},
+                    {title: "about", href: '/'},
+                ]
+            });
 
         });
 
