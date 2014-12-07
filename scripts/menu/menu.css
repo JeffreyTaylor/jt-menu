@@ -1,0 +1,234 @@
+[hidden] {
+    display: none;
+}
+
+html {
+    background: #fff;
+    color: #000;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+@media screen and (max-device-width: 480px) {
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a img {
+    vertical-align: top;
+}
+
+::selection {
+    background-color: #000;
+    color: #fff;
+}
+
+.main-header {
+    *zoom: 1;
+    -webkit-transition: padding 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: padding 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: padding 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    position: relative;
+    padding: 1.5em 0 0.5em;
+    z-index: 1;
+}
+
+.main-header:before, .main-header:after {
+    content: " ";
+    display: table;
+}
+
+.main-header:after {
+    clear: both;
+}
+
+@media screen and (min-width: 321px) {
+    .main-header {
+        padding-top: 2em;
+        padding-bottom: 1em;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .main-header {
+        padding-top: 3em;
+        padding-bottom: 2em;
+    }
+}
+
+.button {
+    -webkit-transition: all 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: all 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    display: block;
+    padding: 0.825em 1.5em;
+    font-size: 0.875em;
+    line-height: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.button:hover {
+    background-color: #000;
+    color: inherit;
+}
+
+.main-nav {
+    position: relative;
+    z-index: 1;
+    min-height: 2.4375em;
+    overflow: hidden;
+}
+
+.main-nav .handle {
+    cursor: pointer;
+    display: none;
+}
+
+.nav-list {
+    *zoom: 1;
+    position: relative;
+    float: left;
+    left: 50%;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.nav-list:before, .nav-list:after {
+    content: " ";
+    display: table;
+}
+
+.nav-list:after {
+    clear: both;
+}
+
+.nav-list-item {
+    -webkit-transition: all 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: all 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    float: left;
+    position: relative;
+    right: 50%;
+    border-color: #000;
+}
+
+.nav-list-item.is-selected .nav-button {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+.nav-button {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+.nav-button {
+    border-color: #fff;
+    color: #fff;
+}
+
+.nav-button:hover {
+    background-color: #fff;
+    border-color: rgba(255,255,255,0);
+    color: #000;
+}
+
+@media screen and (min-width: 769px) {
+    .main-nav {
+        position: absolute;
+        top: 3em;
+        right: 2em;
+        text-align: right;
+    }
+
+    .main-nav .handle {
+        display: inline-block;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    .main-nav:hover .handle {
+        border-color: inherit;
+    }
+
+    .main-nav:hover .handle {
+        border-color: rgba(0,0,0,0);
+    }
+
+    .main-nav:hover .nav-list-item {
+        opacity: 1;
+    }
+
+    .nav-list {
+        top: -2px;
+        left: -2px;
+        float: none;
+    }
+
+    .nav-list-item {
+        opacity: 0;
+        right: 0;
+        float: none;
+        border: none;
+    }
+
+    .nav-list-item.is-selected {
+        display: none;
+    }
+
+    .nav-button {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .main-nav .handle {
+        float: right;
+    }
+
+    .nav-list {
+        float: left;
+        top: 2px;
+        left: 2px;
+    }
+
+    .nav-list-item {
+        float: left;
+    }
+}
