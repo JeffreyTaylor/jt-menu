@@ -97,7 +97,7 @@
 
             template += '</ul></nav>';
 
-            //self.setSelected(selected);
+            self.setSelected(selected);
 
             return template;
         },
@@ -124,7 +124,10 @@
 
         },
 
-        aPublicMethod: function () {
+        setSelected: function (selected) {
+
+
+            /// not doing anything yet.
 
         }
 

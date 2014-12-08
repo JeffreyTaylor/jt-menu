@@ -17,14 +17,6 @@
     display: list-item;
 }
 
-@media screen and (max-device-width: 480px) {
-
-    .jt-menu {
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-    }
-}
-
 .jt-menu *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -73,20 +65,6 @@
 
 .jt-menu .main-header:after {
     clear: both;
-}
-
-@media screen and (min-width: 321px) {
-    .jt-menu .main-header {
-        padding-top: 2em;
-        padding-bottom: 1em;
-    }
-}
-
-@media screen and (min-width: 481px) {
-    .jt-menu .main-header {
-        padding-top: 3em;
-        padding-bottom: 2em;
-    }
 }
 
 .jt-menu .button {
@@ -148,11 +126,6 @@
     border-color: #000;
 }
 
-.jt-menu .nav-list-item.is-selected .nav-button {
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-}
-
 .jt-menu .nav-button {
     padding-left: 0.75em;
     padding-right: 0.75em;
@@ -169,15 +142,42 @@
     color: #000;
 }
 
-@media screen and (min-width: 769px) {
-    
-    .jt-menu .main-nav {
-        position: absolute;
-        top: 3em;
-        right: 2em;
-        text-align: right;
+.jt-menu .main-nav {
+    position: absolute;
+    top: 3em;
+    right: 2em;
+    text-align: right;
+}
+
+
+@media screen and (min-width: 321px) {
+
+    .jt-menu .main-header {
+        padding-top: 2em;
+        padding-bottom: 1em;
     }
 
+}
+
+@media screen and (max-device-width: 480px) {
+
+    .jt-menu {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+}
+
+@media screen and (min-width: 481px) {
+
+    .jt-menu .main-header {
+        padding-top: 3em;
+        padding-bottom: 2em;
+    }
+
+}
+
+
+@media (max-width: 768px) {
 
     .jt-menu .nav-list li:first-child {
         display: none;
@@ -187,6 +187,7 @@
         display: inline-block;
         border-style: solid;
         border-width: 2px;
+        float: right;
     }
 
     .jt-menu .main-nav:hover .handle {
@@ -202,44 +203,19 @@
     }
 
     .jt-menu .nav-list {
-        top: -2px;
-        left: -2px;
-        float: none;
-    }
-
-    .jt-menu .nav-list-item {
-        opacity: 0;
-        right: 0;
-        float: none;
-        border: none;
-    }
-
-    .jt-menu .nav-list-item.is-selected {
-        display: none;
-    }
-
-    .jt-menu .nav-button {
-        display: inline-block;
-    }
-}
-
-@media screen and (min-width: 961px) {
-
-    .jt-menu .nav-list li:first-child {
-        display: none;
-    }
-
-    .jt-menu .main-nav .handle {
-        float: right;
-    }
-
-    .jt-menu .nav-list {
         float: left;
         top: 2px;
         left: 2px;
     }
 
     .jt-menu .nav-list-item {
+        opacity: 0;
+        right: 0;
         float: left;
+        border: none;
+    }
+
+    .jt-menu .nav-button {
+        display: inline-block;
     }
 }
