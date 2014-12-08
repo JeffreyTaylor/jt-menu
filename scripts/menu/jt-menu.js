@@ -55,6 +55,8 @@
                 DOM = self._DOM;
 
 
+            el.addClass('jt-menu');
+
             DOM.template = self._generateTemplate();
 
 
@@ -81,13 +83,15 @@
                 if (i == 0) {
 
                     template += ('<a class="handle nav-button button"');
-                    template += (' href="' + link.href +'">' + link.title +'</a>');
+                    template += (' href="' + link.href + '">' + link.title + '</a>');
                     template += ('<ul class="nav-list">');
-                    selected = link;
-                }
 
-                template += ('<li id="nav-item-"' + link.title +'" class="nav-list-item">');
-                template += ('<a class="nav-button button" href="' + link.href +'">' + link.title +'</a></li>');
+                    selected = link;
+
+                }
+                template += ('<li id="nav-item-' + link.title.toLowerCase() + '" class="nav-list-item">');
+                template += ('<a class="nav-button button" href="' + link.href + '">' + link.title + '</a></li>');
+
 
             }
 
